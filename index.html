@@ -794,16 +794,20 @@
   background: rgba(255,255,255,.6);
 }
 
-/* note selalu di bawah foto */
+/* NOTE bisa discroll */
 #p4 .note{
   font-weight:800;
   color: rgba(0,0,0,.62);
   font-size: 14px;
   text-align:center;
-  padding: 0 10px;
-  margin: 0;               /* reset margin */
+  padding: 10px 10px;
   width: 100%;
-  flex: 0 0 auto;
+
+  max-height: 90px;        /* <- atur sesuai selera */
+  overflow-y: auto;         /* <- ini kuncinya */
+  -webkit-overflow-scrolling: touch; /* smooth di iOS */
+  background: rgba(255,255,255,.35);  /* opsional biar keliatan area note */
+  border-radius: 14px;               /* opsional */
 }
 
 /* controls fix: selalu paling bawah dan gak niban */
@@ -1157,7 +1161,7 @@ I’m so grateful for this one beautiful month by your side. Sebuah kebahagiaan 
       </div>   <!-- ✅ tutup .panel -->
 </section>     <!-- ✅ tutup page p4 -->
 
-      <audio id="audio" src="nothing.mp3" preload="auto"></audio>
+      <audio id="audio" src="justyou.mp3" preload="auto"></audio>
     </div>
   </div>
 
